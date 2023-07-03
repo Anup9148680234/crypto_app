@@ -58,18 +58,18 @@ function List({ coin, delay, isWatchlistPage }) {
         <Tooltip placement="bottom-start" title="Curent Price">
           <td>
             <p
-              className={`coin-price coin-price-list desktop-price ${
+              className={`coin-price coin-price-list desktop-price ₹{
                 coin.price_change_percentage_24h < 0 && "coin-price-red"
               }`}
             >
-              ${coin.current_price.toLocaleString()}
+              ₹{coin.current_price.toLocaleString('en-IN')}
             </p>
             <p
-              className={`coin-price coin-price-list mobile-price ${
+              className={`coin-price coin-price-list mobile-price ₹{
                 coin.price_change_percentage_24h < 0 && "coin-price-red"
               }`}
             >
-              $
+              ₹
               {convertNumbers(
                 coin.current_price < 1
                   ? parseFloat(coin.current_price).toFixed(3)
@@ -81,21 +81,21 @@ function List({ coin, delay, isWatchlistPage }) {
         <Tooltip placement="bottom-start" title="Total Volume">
           <td className="td-mkt-cap">
             <span className="coin-total_volume">
-              {coin.total_volume.toLocaleString()}
+              {coin.total_volume.toLocaleString('en-IN')}
             </span>
           </td>
         </Tooltip>
         <Tooltip placement="bottom-start" title="Market Cap">
           <td className="td-mkt-cap">
             <span className="coin-total_volume">
-              ${coin.market_cap.toLocaleString()}
+              ₹{coin.market_cap.toLocaleString('en-IN')}
             </span>
           </td>
         </Tooltip>
         <Tooltip placement="bottom-start" title="Market Cap">
           <td className="mobile-td-cap">
             <span className="coin-total_volume coin-total_volume-list">
-              ${convertNumbers(parseFloat(coin.market_cap))}
+              ₹{convertNumbers(parseFloat(coin.market_cap))}
             </span>
           </td>
         </Tooltip>
@@ -114,13 +114,13 @@ function List({ coin, delay, isWatchlistPage }) {
           >
             {added ? (
               <StarRoundedIcon
-                className={`watchlist-icon ${
+                className={`watchlist-icon ₹{
                   coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
                 } `}
               />
             ) : (
               <StarBorderRoundedIcon
-                className={`watchlist-icon ${
+                className={`watchlist-icon ₹{
                   coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
                 } `}
               />

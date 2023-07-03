@@ -79,24 +79,24 @@ function Grid({ coin, delay, isWatchlistPage }) {
           </div>
         )}
         <p
-          className={`coin-price ${
+          className={`coin-price ₹{
             coin.price_change_percentage_24h < 0 && "coin-price-red"
           }`}
         >
-          ${coin.current_price.toLocaleString()}
+          ₹{coin.current_price.toLocaleString('en-IN')}
         </p>
         <p className="coin-name-2">
           Total Volume:
           <span className="coin-total_volume">
             {" "}
-            {coin.total_volume.toLocaleString()}
+            ₹{coin.total_volume.toLocaleString('en-IN')}
           </span>
         </p>
         <p className="coin-name-2">
           Market Cap:
           <span className="coin-total_volume">
             {" "}
-            ${coin.market_cap.toLocaleString()}
+            ₹{coin.market_cap.toLocaleString('en-IN')}
           </span>
         </p>
       </motion.div>
