@@ -11,7 +11,7 @@ export const settingChartData = (
     labels: prices1.map((data) => convertDate(data[0])),
     datasets: [
       {
-        label: coin1?.name ?? "",
+        label: coin1.name ?? "",
         data: prices1.map((data) => data[1]),
         borderWidth: 1,
         fill: true,
@@ -21,7 +21,7 @@ export const settingChartData = (
         pointRadius: 0,
       },
       prices2 && {
-        label: coin2?.name ?? "",
+        label: coin2.name ?? "",
         data: prices2.map((data) => data[1]),
         borderWidth: 1,
         fill: true,
