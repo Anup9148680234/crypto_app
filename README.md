@@ -4,5 +4,9 @@ CryptoTracker makes it easy for you to analyze, visualize, monitor and watchlist
 
 # Screenshots
 
+![Dashboard 1](./public/screen1.PNG "Screenshot 1")
 
+![Screenshot 2](./public/screen1.PNG "Screenshot 2")
+
+![Screenshot 3](./public/screen1.PNG "Screenshot 3")
 
